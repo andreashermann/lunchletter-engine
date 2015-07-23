@@ -378,7 +378,7 @@
 "Nordbrücke","Dammstrasse",58,10,8037,"Zürich","0400/frei","Gastwirtschaft","Offen",682351.201,249734.617
 "Nosch","Niederdorfstrasse",49,1,8001,"Zürich","0400/Frei","Gastwirtschaft","Offen",683463.503,247752.155
 "Old Crow","Schwanengasse",4,1,8001,"Zürich","0400/Frei","Gastwirtschaft","Offen",683273.314,247391.821
-"Olif, X-trend ","Langstrasse",81,4,8004,"Zürich","0400/frei","Gastwirtschaft","Offen",682144.976,247997.846
+"Olif X-trend","Langstrasse",81,4,8004,"Zürich","0400/frei","Gastwirtschaft","Offen",682144.976,247997.846
 "Olympic Lounge Cafe","Ueberlandstrasse",350,12,8051,"Zürich","0400/Frei","Gastwirtschaft","Offen",686335.09,251398.733
 "Olé Olé Bar","Langstrasse",138,4,8004,"Zürich","0400/Frei","Gastwirtschaft","Offen",682268.809,248256.017
 "Oriental Club","Hohlstrasse ",452,9,8048,"Zürich","0400/Frei","Dancing / Disco","Offen",679831.217,249222.638
@@ -443,7 +443,7 @@
 "Suan Long","Tessinerplatz",12,2,8002,"Zürich","0400/frei","Gastwirtschaft","Offen",682522.851,246470.202
 "Supermarket","Geroldstrasse",17,5,8005,"Zürich","0400/frei","Dancing / Disco","Offen",681625.059,248869.957
 "TERZO","Seefeldstrasse",214,8,8008,"Zürich","0400/Frei","Gastwirtschaft","Offen",684633.774,245286.527
-"Tabak Sedal, Cakir","Ankerstrasse",119,4,8004,"Zürich","0400/Frei","Nebenwirtschaft","Offen",682284.659,247874.111
+"Tabak Sedal Cakir","Ankerstrasse",119,4,8004,"Zürich","0400/Frei","Nebenwirtschaft","Offen",682284.659,247874.111
 "Talacker 41","Talacker",41,1,8001,"Zürich","0400/frei","Gastwirtschaft","Offen",682792.964,247369.537
 "Tantuni","Badenerstrasse ",250,4,8004,"Zürich","0400/Frei","Gastwirtschaft","Offen",681363.854,247794.345
 "Tanzwerk 101","Pfingstweidstrasse",103,5,8005,"Zürich","0400/Frei","Gastwirtschaft","Offen",680696.75,249375.796
@@ -840,7 +840,7 @@
 "Bäckerei Conditorei Stocker","Forchstrasse",2,8,8008,"Zürich",,"Nebenwirtschaft","Offen",684301.898,246558.485
 "Bäckerei Hotz","Witikonerstrasse ",382,7,8032,"Zürich",,"Nebenwirtschaft","Offen",687172.742,246008.433
 "Bäckerei Stocker","Stadelhoferstrasse",22,1,8001,"Zürich",,"Aussenliegende Saisonwirtschaft","Offen",683739.349,246842.973
-"Bäckerei, Konditorei, Confiserie, Cafe Pfyl ","Albulastrasse",58,9,8048,"Zürich",,"Gastwirtschaft","Offen",679519.731,249179.903
+"Bäckerei Konditorei Confiserie Cafe Pfyl","Albulastrasse",58,9,8048,"Zürich",,"Gastwirtschaft","Offen",679519.731,249179.903
 "Bäckerei-Kaffee Fellenberg","Fellenbergstrasse",258,9,8047,"Zürich",,"Nebenwirtschaft","Offen",679667.726,247664.077
 "Bäckerei-Konditorei Bode","Fellenbergstrasse",228,9,8047,"Zürich",,"Gastwirtschaft","Offen",679865.082,247623.913
 "Bäckerei-Konditorei Remo Wüst","Schaffhauserstrasse ",21,6,8006,"Zürich",,"Nebenwirtschaft","Offen",683067.345,249338.429
@@ -1960,7 +1960,7 @@
 "Tisch Bank Stuhl","Fraumünsterstrasse ",2,1,8001,"Zürich",,"Nebenwirtschaft","Offen",683296.498,246886.3
 "Tizziani","Hönggerstrasse",10,10,8037,"Zürich",,"Gastwirtschaft","Offen",682186.604,249476.185
 "Tokyo Avenue","Siewerdtstrasse ",69,11,8050,"Zürich",,"Gastwirtschaft","Offen",684175.499,251885.147
-"Tong Thai Dee, Take Away","Seestrasse",334,2,8038,"Zürich",,"Nebenwirtschaft","Offen",682669.655,244598.76
+"Tong Thai Dee Take Away","Seestrasse",334,2,8038,"Zürich",,"Nebenwirtschaft","Offen",682669.655,244598.76
 "Tongs Thai","Selnaustrasse",13,1,8002,"Zürich",,"Gastwirtschaft","Offen",682598.772,247182.175
 "Toni Areal","Pfingstweidstrasse",96,5,8005,"Zürich",,"Gastwirtschaft","Offen",680992.688,249423.566
 "Topolino","Pfingstweidstrasse",101,5,8005,"Zürich",,"Gastwirtschaft","Offen",680815.609,249373.877
@@ -2121,7 +2121,7 @@
 "cha chá positive eating","Talstrasse",61,1,8001,"Zürich",,"Gastwirtschaft","Offen",682848.103,247190.933
 "city church","Ankerstrasse ",112,4,8004,"Zürich",,"Veranstaltungsraum","Offen",682279.993,247804.978
 "dellaNonna","Seefeldstrasse",202,8,8008,"Zürich",,"Nebenwirtschaft","Offen",684586.137,245360.193
-"elvetino AG, Bahngastronomie SBB","Limmatstrasse",23,5,8005,"Zürich",,"Gastwirtschaft","Offen",682911.532,248342.153
+"elvetino AG Bahngastronomie SBB","Limmatstrasse",23,5,8005,"Zürich",,"Gastwirtschaft","Offen",682911.532,248342.153
 "enfant terrible","Zentralstrasse",156,3,8003,"Zürich",,"Gastwirtschaft","Offen",681271.752,247779.811
 "ibis","Schiffbaustrasse",11,5,8005,"Zürich",,"Gastwirtschaft","Offen",681427.961,249243.969
 "noon","Oberdorfstrasse",9,1,8001,"Zürich",,"Gastwirtschaft","Offen",683598.835,247015.674
