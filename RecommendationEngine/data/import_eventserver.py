@@ -25,7 +25,7 @@ def import_events(client, file):
         target_entity_id=data[1], # restaurant name
         properties= { "rating" : random.randint(1, 5) } # random rating
         )
-      count += 1
+    count += 1
   f.close()
   print "%s events are imported." % count
 
