@@ -20,8 +20,18 @@ def import_events(client, file):
       client.create_event(
         event="add_restaurant",
         entity_type="restaurant",
-        entity_id=data[1]
-        )
+        entity_id=data[0],
+        properties= {
+          "name" : data[1],
+          "address1" : data[2] + " " + data[3],
+          "address2" : data[5] + " " + data[6],
+          "opening_hours" : data[7],
+          "type" : data[8],
+          "status" : data[9],
+          "coordinate_x" : data[10],
+          "coordinate_y" : data[11]
+        }
+      )
     count += 1
   f.close()
   print "%s restaurants are imported." % count
