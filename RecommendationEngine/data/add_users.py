@@ -14,7 +14,7 @@ def import_events(client, file):
     client.create_event(
       event="add_user",
       entity_type="user",
-      entity_id=line
+      entity_id=line.rstrip('\r\n')
     )
     count += 1
   f.close()

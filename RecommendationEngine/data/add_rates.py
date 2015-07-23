@@ -17,7 +17,7 @@ def import_events(client, file):
   print "Generating random rates..."
   users = []
   for line in users_file:
-    users.append(line)
+    users.append(line.rstrip('\r\n'))
   for line in restaurants_file:
     restaurant_data = line.rstrip('\r\n').split(RATE_ACTIONS_DELIMITER)
     if count != 0:
