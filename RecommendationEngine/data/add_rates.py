@@ -25,10 +25,10 @@ def import_events(client, file):
         event="rate",
         entity_type="user",
         entity_id=users[random.randint(0, 5)],
-        target_entity_type="item",
+        target_entity_type="restaurant",
         target_entity_id=restaurant_data[1], # restaurant name
         properties= { "rating" : random.randint(1, 5) } # random rating
-        )
+      )
     count += 1
   restaurants_file.close()
   users_file.close()

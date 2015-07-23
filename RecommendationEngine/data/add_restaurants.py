@@ -19,7 +19,7 @@ def import_events(client, file):
     if count != 0:
       client.create_event(
         event="add_restaurant",
-        entity_type="item",
+        entity_type="restaurant",
         entity_id=data[1]
         )
     count += 1
