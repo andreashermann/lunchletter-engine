@@ -26,7 +26,7 @@ def import_events(client, file):
         entity_type="user",
         entity_id=users[random.randint(0, 5)],
         target_entity_type="restaurant",
-        target_entity_id=restaurant_data[1], # restaurant name
+        target_entity_id=restaurant_data[0],
         properties= { "rating" : random.randint(1, 5) } # random rating
       )
     count += 1
