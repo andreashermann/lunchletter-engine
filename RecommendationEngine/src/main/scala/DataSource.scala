@@ -39,7 +39,7 @@ class DataSource(val dsp: DataSourceParams)
         entityType = Some("restaurant"),
         eventNames = Some(List("add_restaurant")))(sc)
 
-    val restaurantMap: restaurantsRDD.map(i => i.entityId -> i).toMap
+    val restaurantMap: restaurantsRDD map (i => i.entityId -> i) toMap
         
     val ratingsRDD: RDD[Rating] = eventsRDD.map { event =>
       val rating = try {
