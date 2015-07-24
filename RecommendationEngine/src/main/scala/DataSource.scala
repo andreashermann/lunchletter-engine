@@ -64,7 +64,7 @@ class DataSource(val dsp: DataSourceParams)
     ratingsRDD
   }
   
-  def distance (restaurant) : Float = {
+  def distance (restaurant: Event) : Float = {
    val curLocX = 684290
    val curLocY = 246897
    val restLocX = restaurant.properties.get[Double]("coordinate_x")
