@@ -2132,3 +2132,4 @@ ID::Betriebsname::Strasse::Nr.::Kreis::PLZ::Ort::Oeffnungszeit::Betriebsart::Sta
 2131::time 2 dance::Binzstrasse ::9::3::8045::Zürich::::Nebenwirtschaft::Offen::681442.939::246341.081
 2132::vom Fass::Europaallee::17::4::8004::Zürich::::Nebenwirtschaft::Offen::682684.22::248093.725
 2133::wagamama ::Talstrasse::83::1::8001::Zürich::::Gastwirtschaft::Offen::682727.734::247382.062
+2134::Pasta Romagna::Minervastrasse::29::7::8032::Zürich::::Gastwirtschaft::Offen::::
