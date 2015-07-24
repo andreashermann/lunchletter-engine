@@ -11,7 +11,10 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.rdd.RDD
 
+import math._
+
 import grizzled.slf4j.Logger
+
 
 case class DataSourceEvalParams(kFold: Int, queryNum: Int)
 
@@ -39,12 +42,12 @@ class DataSource(val dsp: DataSourceParams)
         entityType = Some("restaurant"),
         eventNames = Some(List("add_restaurant")))(sc)
 
-    val restaurantMap: restaurantsRDD map (i => i.entityId -> i) toMap
+    val restaurantMap = restaurantsRDD.collect().map(i => i.entityId -> i).toMap
         
     val ratingsRDD: RDD[Rating] = eventsRDD.map { event =>
       val rating = try {
         val ratingValue: Double = event.event match {
-          case "rate" => event.properties.get[Double]("rating") * (1 / distance(restaurantMap get event.targetEntityId.get))
+          case "rate" => event.properties.get[Double]("rating") * (1 / distance(restaurantMap.get(event.targetEntityId.get).get))
           case "visit" => 4.0 // map buy event to rating value of 4
           case _ => throw new Exception(s"Unexpected event ${event} is read.")
         }
@@ -64,14 +67,14 @@ class DataSource(val dsp: DataSourceParams)
     ratingsRDD
   }
   
-  def distance (restaurant: Event) : Float = {
+  def distance (restaurant: Event) : Double = {
    val curLocX = 684290
    val curLocY = 246897
    val restLocX = restaurant.properties.get[Double]("coordinate_x")
    val restLocY = restaurant.properties.get[Double]("coordinate_y")
    val distX = abs(restLocX - curLocX)
    val distY = abs(restLocY - curLocY)
-   return (distX.pow + distY.pow).sqrt
+   return sqrt(distX * distX + distY * distY)
   }
 
   override
