@@ -45,11 +45,16 @@ class DataSource(val dsp: DataSourceParams)
     val restaurantMap = restaurantsRDD.collect().map(i => i.entityId -> i).toMap
         
     val ratingsRDD: RDD[Rating] = eventsRDD.map { event =>
+      val ratingValue = 1.0
       val rating = try {
-        val ratingValue: Double = event.event match {
-          case "rate" => event.properties.get[Double]("rating") * (1 / distance(restaurantMap.get(event.targetEntityId.get).get))
-          case "visit" => 4.0 // map buy event to rating value of 4
-          case _ => throw new Exception(s"Unexpected event ${event} is read.")
+        if(!event.targetEntityId.isEmpty){
+          //var rst: Event = restaurantMap.get(event.targetEntityId.get).get
+          val dist = 1//distance(rst);
+          val ratingValue: Double = event.event match {
+            case "rate" => event.properties.get[Double]("rating") * (1 / dist)
+            case "visit" => 4.0 // map buy event to rating value of 4
+            case _ => throw new Exception(s"Unexpected event ${event} is read.")
+          }
         }
         // entityId and targetEntityId is String
         Rating(event.entityId,
