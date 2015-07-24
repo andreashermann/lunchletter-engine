@@ -33,11 +33,18 @@ class DataSource(val dsp: DataSourceParams)
       eventNames = Some(List("rate", "visit")), // read "rate" and "buy" event
       // targetEntityType is optional field of an event.
       targetEntityType = Some(Some("restaurant")))(sc)
+      
+    val restaurantsRDD: RDD[Event] = PEventStore.find(
+        appName = dsp.appName,
+        entityType = Some("restaurant"),
+        eventNames = Some(List("add_restaurant")))(sc)
 
+    val restaurantMap: restaurantsRDD.map(i => i.entityId -> i).toMap
+        
     val ratingsRDD: RDD[Rating] = eventsRDD.map { event =>
       val rating = try {
         val ratingValue: Double = event.event match {
-          case "rate" => event.properties.get[Double]("rating")
+          case "rate" => event.properties.get[Double]("rating") * (1 / distance(restaurantMap get event.targetEntityId.get))
           case "visit" => 4.0 // map buy event to rating value of 4
           case _ => throw new Exception(s"Unexpected event ${event} is read.")
         }
@@ -55,6 +62,16 @@ class DataSource(val dsp: DataSourceParams)
     }.cache()
 
     ratingsRDD
+  }
+  
+  def distance (restaurant) : Float = {
+   val curLocX = 684290
+   val curLocY = 246897
+   val restLocX = restaurant.properties.get[Double]("coordinate_x")
+   val restLocY = restaurant.properties.get[Double]("coordinate_y")
+   val distX = abs(restLocX - curLocX)
+   val distY = abs(restLocY - curLocY)
+   return (distX.pow + distY.pow).sqrt
   }
 
   override
