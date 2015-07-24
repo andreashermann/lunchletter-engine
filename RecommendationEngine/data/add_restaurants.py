@@ -17,7 +17,7 @@ def import_events(client, file):
   for line in f:
     data = line.rstrip('\r\n').split(RATE_ACTIONS_DELIMITER)
     type = data[8]
-    if count != 0 & type == "Gastwirtschaft":
+    if count != 0 and type == "Gastwirtschaft":
       client.create_event(
         event="add_restaurant",
         entity_type="restaurant",
